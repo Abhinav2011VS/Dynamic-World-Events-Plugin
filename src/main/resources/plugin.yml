@@ -1,0 +1,16 @@
+name: DynamicWorldEventsPlugin
+version: '1.0'
+main: net.abhinav.dwep.DynamicWorldEventsPlugin
+api-version: '1.21'
+load: STARTUP
+authors: [ Abhinav VS ]
+description: "Adds realistic and dynamic world-changing events including meteor showers, mob invasions, and floods."
+commands:
+  triggerEvent:
+    description: "Triggers a specific event in the world."
+    usage: "/triggerEvent <event>"
+    permission: dynamicworldevents.trigger
+permissions:
+  dynamicworldevents.trigger:
+    description: "Allows use of the /triggerEvent command."
+    default: op

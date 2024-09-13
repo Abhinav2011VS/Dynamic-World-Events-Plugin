@@ -1,0 +1,58 @@
+# DynamicWorldEvents Configuration
+
+# Chance (out of 100) for an event to trigger each interval
+event-chance: 10
+
+# Interval in ticks at which to check for events (default: 6000 ticks, or 5 minutes)
+event-interval: 6000
+
+# Disaster frequency settings
+disaster-frequency:
+  meteor-shower:
+    probability: 5
+    interval: 7200
+  mob-invasion:
+    probability: 10
+    interval: 12000
+  flood:
+    probability: 8
+    interval: 14400
+
+# Event settings
+events:
+  meteor-shower:
+    enabled: true
+    number-of-meteors: 10
+    explosion-power: 4
+  mob-invasion:
+    enabled: true
+    number-of-mobs: 200
+    mob-type: ZOMBIE
+  flood:
+    enabled: true
+    start-water-level: 64
+    end-water-level: 100
+    update-interval: 200 # Interval in ticks to increase the water level
+    water-level-alerts:
+      - level: 70
+        message: "Warning: Water level is rising! Prepare for flooding!"
+      - level: 85
+        message: "Alert: Flood is imminent! Seek higher ground!"
+    flood-damage:
+      enabled: true
+      damage-per-tick: 1
+
+# Assistance items
+assistance-items:
+  flood-resistance-potion:
+    enabled: true
+    potion-type: WATER_BREATHING
+    duration: 6000
+  meteor-shield:
+    enabled: true
+    shield-damage-reduction: 50
+
+# World recovery
+world-recovery:
+  enabled: true
+  recovery-time: 36000
